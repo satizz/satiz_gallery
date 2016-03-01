@@ -1,16 +1,14 @@
 from __future__ import unicode_literals
-from datetime import date
+
 from django.db import models
 
 # models are here.
 
-class items(models.Model):
+class item(models.Model):
     name = models.CharField(max_length = 60)
+    quan = models.IntegerField('Quantity',default = 1)
     rate = models.IntegerField(default = 0)
-    quan = models.IntegerField(default = 1)
-    buyed = date()
+    date = models.DateField('Bought In')
 
     def __str__(self):
         return self.name
-
-
