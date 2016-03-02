@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% if list %}
+    <ul>
+        <li style="display:none;">Item Name</li>
+    {% for item in list %}
+        <p><a href="/polls/{{ item.id }}/">{{ item.name }}</a>{{ item.qaun }} {{item.rate}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No items are available.</p>
+{% endif %}
+</body>
+</html>
