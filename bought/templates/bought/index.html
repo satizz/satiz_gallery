@@ -9,7 +9,7 @@
     <ul>
         <li style="display:none;">Item Name</li>
     {% for item in list %}
-        <p><a href="/polls/{{ item.id }}/">{{ item.name }}</a>{{ item.qaun }} {{item.rate}}</li>
+        <p><a href="/buy/{{ item.id }}/">{{ item.name }}</a>{{ item.qaun }} {{item.rate}}</li>
     {% endfor %}
     </ul>
 {% else %}
