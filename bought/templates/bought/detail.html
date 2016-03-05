@@ -4,40 +4,56 @@
     <meta charset="UTF-8">
     <title> {{item.name}}</title>
 <style >
-    #menu {
-        float:left;
-        background-color : black;
+    #menu{
+        list-style:none;
+        text-decoration: none;
+        color:white;
+        margin:auto;
     }
-    .nav {
-
+    .nav li{
+        padding: 10px;
         display:inline;
         float:left;
-        margin:0;
 
+    }
+    .nav li a {
+        text-decoration:none;
+        color:grey;
+
+
+    }
+
+    #detail li {
+        list-style:none;
+        text-align:left;
+        font-size : 22px;
     }
 
 </style>
 </head>
     <body>
 <div id="menu">
-						<ul class="nav navbar-nav navbar-right">
+						<ul class="nav">
 							  <li><a href="http://localhost:8000/buy">Home</a></li>
 							  <li><a href="http://localhost:8000/admin">Admin</a></li>
 						</ul>
 					</div>
 <br>
 {% if item %}
-<h1>Item Detail</h1>
-<p>
-<ul>
+<div style="text-align:center;background:red;">
+    <h1 >Item Detail</h1>
+<div style="text-align:justify;background-color:black;color:white;" >
+<ul id = 'detail'>
     <li>Name: {{item.name}}</li>
     <li>Quantity: {{item.quan}}</li>
     <li>Rate: {{item.rate}}</li>
-    <li>latest date purchased: {{item.date}}</li>
-    <li>sold : {{item.status}}</li>
+    <li>Latest date purchased: {{item.date}}</li>
+    <li>Sold : {%  if item.status == True %} Yes {% else %} No{%endif%}</li>
 </ul>
-</p>
+
+</div>
 {% endif %}
 
+</div>
 </body>
 </html>

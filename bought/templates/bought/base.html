@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<p lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+    <title> {{item.name}}</title>
+<style >
+    #menu{
+        list-style:none;
+        text-decoration: none;
+        color:white;
+        margin:auto;
+    }
+    .nav li{
+        padding: 10px;
+        display:inline;
+        float:left;
 
+    }
+    .nav li a {
+        text-decoration:none;
+        color:grey;
+
+
+    }
+
+    #detail li {
+        list-style:none;
+        text-align:left;
+        font-size : 22px;
+    }
+
+</style>
+</head>
+    <body>
+<div id="menu">
+						<ul class="nav">
+							  <li><a href="http://localhost:8000/buy">Home</a></li>
+							  <li><a href="http://localhost:8000/admin">Admin</a></li>
+						</ul>
+					</div>
+{{blockcontent}}
+{{endblock}}
 </body>
 </html>
