@@ -1,12 +1,26 @@
 {%include 'bought/base.html'%}
 {{blockcontent}}
+<br>
 {% if list %}
-    <ul>
-        <li style="display:none;">Item Name</li>
+<div style="text-align:center;background:red;">
+    <h1 >Items List</h1>
     {% for item in list %}
-        <p><a href="/buy/{{ item.id }}/">{{ item.name }}</a>{{ item.qaun }} {{item.rate}}</li>
-    {% endfor %}
-    </ul>
+<div class = 'view'>
+<ul id = 'detail'>
+
+    <li class ='item_name'>Name: {{item.name}}</li>
+    <li>Quantity: {{item.quan}}</li>
+    <li>Rate: {{item.rate}}</li>
+    <li>Latest date purchased: {{item.date}}</li>
+    <li>Sold : {%  if item.status == True %} Yes {% else %} No{%endif%}</li>
+    <br>
+    <li><a href="/buy/{{ item.id }}/" style="text-decoration:none;">click here for details</a></li>
+    <hr>
+
+</ul>
+
+</div>
+     {% endfor %}
 {% else %}
     <p>No items are available.</p>
 {% endif %}
