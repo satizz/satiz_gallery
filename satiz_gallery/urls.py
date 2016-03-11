@@ -19,5 +19,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^buy/', include('bought.urls')),
+    url(r'^night/', include('night_market_purchase.urls')),
+
 
 ]

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
   'django.contrib.messages',
   'django.contrib.staticfiles',
   'bought',
+    'night_market_purchase',
 ]
 
 MIDDLEWARE_CLASSES = [
